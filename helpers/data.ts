@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
-import p1 from "@/images/p1.png";
-import p2 from "@/images/p2.png";
-import p3 from "@/images/p3.png";
-import p4 from "@/images/p4.png";
-import p5 from "@/images/p5.png";
-import p6 from "@/images/p6.png";
+import p1 from "@/images/p1.avif";
+import p2 from "@/images/p2.avif";
+import p3 from "@/images/p3.avif";
+import p4 from "@/images/p4.avif";
+import p5 from "@/images/p5.avif";
+import p6 from "@/images/p6.avif";
 
 export interface ProductsType {
   name: string;

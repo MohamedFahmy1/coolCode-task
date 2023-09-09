@@ -64,6 +64,11 @@
         grid-template-columns: 1fr;
       }
       & .left {
+        & p {
+          @include small-screen {
+            display: none;
+          }
+        }
         @include mobile {
           position: fixed;
           bottom: 0;
@@ -75,7 +80,6 @@
           z-index: 50;
           border-top: 2px solid #9b9b9b;
           transition: $main-transition;
-
           &.active {
             left: 0;
             & .buttons {
@@ -102,6 +106,7 @@
             }
           }
         }
+
         & .buttons {
           display: none;
         }

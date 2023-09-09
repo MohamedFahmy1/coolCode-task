@@ -2,17 +2,10 @@ import React from "react";
 
 const NumberOfPages: React.FC<{
   windowSize: number;
-  finalData: React.JSX.Element[];
   pageNumber: number;
   pageNumber1Handler: () => void;
   pageNumber2Handler: () => void;
-}> = ({
-  windowSize,
-  finalData,
-  pageNumber,
-  pageNumber1Handler,
-  pageNumber2Handler,
-}) => {
+}> = ({ windowSize, pageNumber, pageNumber1Handler, pageNumber2Handler }) => {
   return (
     <>
       {windowSize > 768 ? (

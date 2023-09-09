@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 import shoppingCart from "@/images/shopping-cart.svg";
-import featured from "@/images/featured.png";
-import lay1 from "@/images/lay1.png";
-import lay2 from "@/images/lay2.png";
-import lay3 from "@/images/lay3.png";
+import featured from "@/images/featured.avif";
+import lay1 from "@/images/lay1.avif";
+import lay2 from "@/images/lay2.avif";
+import lay3 from "@/images/lay3.avif";
 import close from "@/images/close.svg";
 import { CartContext } from "@/helpers/cartContext";
 import CartItem from "./CartItem";

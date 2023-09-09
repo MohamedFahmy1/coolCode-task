@@ -163,7 +163,6 @@ const Materials = () => {
           </div>
         </div>
         <NumberOfPages
-          finalData={finalData}
           pageNumber={pageNumber}
           pageNumber1Handler={pageNumber1Handler}
           pageNumber2Handler={pageNumber2Handler}
