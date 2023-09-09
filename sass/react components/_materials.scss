@@ -1,0 +1,222 @@
+@use "../helpers/" as *;
+
+.materials {
+  padding: 48px 0;
+  & .container {
+    & .heading {
+      display: flex;
+      justify-content: space-between;
+      & h2 {
+        font-size: 30px;
+        font-weight: 700;
+        @include mobile {
+          font-size: 18px;
+        }
+        & span {
+          color: #9b9b9b;
+          font-size: 30px;
+          font-weight: 400;
+          @include mobile {
+            font-size: 18px;
+          }
+        }
+      }
+      & .sort {
+        & > img {
+          display: none;
+          @include mobile {
+            display: block;
+            cursor: pointer;
+          }
+        }
+        & .sortDetails {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
+          @include mobile {
+            display: none;
+          }
+          & img {
+            cursor: pointer;
+          }
+          & p {
+            color: #9b9b9b;
+            font-size: 22px;
+            font-weight: 400;
+          }
+          & select {
+            border: none;
+            outline: none;
+            width: fit-content;
+            font-size: 22px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    & .materialsContent {
+      padding-top: 70px;
+      display: grid;
+      grid-template-columns: 0.2fr 1fr;
+      gap: 50px;
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+      & .left {
+        @include mobile {
+          position: fixed;
+          bottom: 0;
+          left: -100%;
+          overflow-y: scroll;
+          background-color: white;
+          width: 100%;
+          padding: 20px;
+          z-index: 50;
+          border-top: 2px solid #9b9b9b;
+          transition: $main-transition;
+
+          &.active {
+            left: 0;
+            & .buttons {
+              @include mobile {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding-top: 20px;
+                & .clear {
+                  border: 2px solid #000;
+                  background-color: #fff;
+                  color: #000;
+                  width: 100%;
+                  padding: 10px;
+                }
+                & .save {
+                  border: 2px solid #000;
+                  background-color: #000;
+                  color: white;
+                  width: 100%;
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
+        & .buttons {
+          display: none;
+        }
+        & .text {
+          display: flex;
+          justify-content: space-between;
+          & p {
+            cursor: pointer;
+            font-weight: 700;
+          }
+        }
+        & h3 {
+          font-size: 22px;
+          font-weight: 700;
+          padding: 20px 0;
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+        & form {
+          text-align: left;
+          border-bottom: 1px solid #9b9b9b;
+          & .box {
+            padding: 10px 0;
+            color: #1d1d1d;
+            font-weight: 600;
+            & input {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      & .right {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 50px;
+        & .image {
+          position: relative;
+          overflow: hidden;
+          &:hover {
+            & button {
+              bottom: 0;
+            }
+          }
+          & img {
+            width: 100%;
+            height: auto;
+            max-height: 463.64px;
+          }
+          & p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 10px;
+            background-color: white;
+          }
+          & button {
+            border: none;
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 23px;
+            font-weight: 500;
+            letter-spacing: 1.61px;
+            padding: 10px;
+            cursor: pointer;
+            transition: $main-transition;
+          }
+        }
+        & p.type {
+          color: #656565;
+          font-size: 22px;
+          font-weight: 700;
+        }
+        & h3 {
+          font-size: 34px;
+          font-weight: 700;
+        }
+        & span {
+          color: #656565;
+          font-size: 29px;
+          font-weight: 400;
+        }
+      }
+    }
+    & .pages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-top: 40px;
+      & .arrow {
+        font-size: 36px;
+        font-weight: 700;
+        color: #9b9b9b;
+        cursor: pointer;
+        &.active {
+          color: #000;
+        }
+      }
+      & span {
+        font-size: 29px;
+        font-weight: 700;
+        margin: 0 20px;
+        color: #9b9b9b;
+        cursor: pointer;
+        &.active {
+          color: #000;
+        }
+      }
+    }
+  }
+}
